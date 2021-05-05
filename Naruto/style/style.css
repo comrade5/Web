@@ -83,9 +83,20 @@ h2 {
     font-size: 2vw !important;
 }
 
-#front-content a{
+#front-content a {
     color: white;
     text-decoration: underline;
+    text-shadow: 0px 0px;
+}
+
+#front-content figcaption {
+    margin-top: 5px;
+    border-radius: 10px;  
+}
+
+#front-content figcaption > a {
+    background-color: rgb(68, 67, 67, 0.9);
+    border-radius: 10px;  
 }
 
 #front-content #anime_rel img, #anime_new img {
@@ -105,7 +116,6 @@ h2 {
   
 #front-content a:hover {
     color: red;
-    background-color: transparent;
     text-decoration: underline;
 }
   
@@ -233,4 +243,10 @@ h2 {
 
 #warn {
     text-shadow: 0px 0px;
+}
+
+#emailHelp {
+    text-shadow: 0px 0px; 
+    color: white;
+    font-weight: 100;
 }
