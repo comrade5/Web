@@ -1,0 +1,148 @@
+.border {
+    display: grid;
+    grid-template-columns: 5% 90% 5%;
+    grid-template-rows: 5% 90% 5%;
+    grid-gap: "0px";
+    width: 400px;
+    height: 440px;
+    margin-left:0;
+    text-align: auto;
+}
+
+.room {
+    position: absolute;
+    z-index: 1;
+}
+
+.player {
+    position: absolute;
+    z-index: 2;
+    top: 20px;
+    left: 20px;
+}
+
+table {
+    /* border-spacing:0;
+    border-collapse: collapse; */
+    height: 360px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    table-layout:fixed;
+}
+
+table tr {
+    padding: 0px;
+    margin: 0px;
+}
+
+table td {
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+}
+
+.upper {
+    background-color: #512da8;
+    grid-column: 1/4;
+    display: grid;
+    grid-template-columns: 1fr 1.7fr 1fr;
+}
+
+.lower {
+    background-color:#512da8;
+    grid-column: 1/4;
+    display: grid;
+    grid-template-columns: 1fr 1.7fr 1fr;
+}
+
+.grid {
+    margin-bottom: 6px;
+    background-color:#512da8;
+    position: relative;
+}
+
+.rightSide {
+    background-color: #512da8;
+    display: grid;
+    grid-template-rows: 1fr 2.2fr 1fr;
+}
+
+.leftSide {
+    background-color: #512da8;
+    display: grid;
+    grid-template-rows: 1fr 2.2fr 1fr;
+}
+
+.right {
+    transform:rotate(90deg);
+}
+
+/* .main {
+    height: 400px;
+    margin-left:0;
+    text-align: auto;
+} */
+
+/* Upper pointer */
+img[src="pointer_north.png"]:nth-child(1) {
+    justify-self: end;
+}
+
+img[src="pointer_north.png"]:nth-child(2) {
+    justify-self: center;
+}
+
+img[src="pointer_north.png"]:nth-child(3) {
+    justify-self: start;
+}
+
+
+
+/* left pointer */
+
+img[src="pointer_west.png"]:nth-child(1) {
+    align-self: end;
+}
+
+img[src="pointer_west.png"]:nth-child(2) {
+    align-self: center;
+}
+
+img[src="pointer_west.png"]:nth-child(3) {
+    align-self: start;
+}
+
+
+
+/* Right pointers */
+
+img[src="pointer_east.png"]:nth-child(1) {
+    align-self: end;
+}
+
+img[src="pointer_east.png"]:nth-child(2) {
+    align-self: center;
+}
+
+img[src="pointer_east.png"]:nth-child(3) {
+    align-self: start;
+}
+
+
+
+/* Lower pointers */
+
+img[src="pointer_south.png"]:nth-child(1) {
+    justify-self: end;
+}
+
+img[src="pointer_south.png"]:nth-child(2) {
+    justify-self: center;
+}
+
+img[src="pointer_south.png"]:nth-child(3) {
+    justify-self: start;
+}
+
+
