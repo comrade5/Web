@@ -6,35 +6,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="cardStyle.css">
 </head>
 <body>
-    <div class="main">
-        <div class="border">
-            <div class="upper">
-                <img src="pointer_north.png" alt="pointer" width="16px">
-                <img src="pointer_north.png" alt="pointer" width="16px">
-                <img src="pointer_north.png" alt="pointer" width="16px">
+    <div class="menu">
+        <div class="back hidden"><</div>
+        <div class='main-menu'>
+            <h1>Start</h1>
+            <h1>Instruction</h1>
+            <h1>Settings</h1>
+            <h1>Saved Games</h1>
+        </div>
+        <div class='instruction hidden'>
+            <p>
+                The rooms int maze are symbolized by a 7x7 square grid cells. 
+                For each room we know that which wall has a door. 
+                If there are two doors in the contact wall of two neighbouring rooms, 
+                you can go from one room to another. The even rows and columns in the grid can be slided, 
+                the other rooms are fixed throughout the game. By sliding the rooms in the grid, 
+                doors and passages open through which players can move in the maze. 
+                By cleverly sliding the rooms players try to find their way to the treasures. 
+                The first player to find all their treasures and return to the starting square is the winner.
+            </p>
+            <img src="arrow-keys.png" alt="arrow keys">
+            <img src="spacebar.png" alt="spacebar">
+            <p> Arrow keys -> control playing piece</p>
+            <p> Spacebar -> skip your turn</p>
+        </div>
+        <div class='settings hidden'>
+            <div>
+                <span>Number of Players</span>
+                <input type="range" value="2" min="2" max="4" oninput="rangevalue.value=value"/>
+                <output id="rangevalue">2</output>
             </div>
-            <div class="leftSide">
-                <img src="pointer_west.png" alt="pointer" width="16px">
-                <img src="pointer_west.png" alt="pointer" width="16px">
-                <img src="pointer_west.png" alt="pointer" width="16px">
-            </div>
-            <div class="grid">
-                
-            </div>
-            <div class="rightSide">
-                <img src="pointer_east.png" alt="pointer" width="16px">
-                <img src="pointer_east.png" alt="pointer" width="16px">
-                <img src="pointer_east.png" alt="pointer" width="16px">
-            </div>
-            <div class="lower">
-                <img src="pointer_south.png" alt="pointer" width="16px">
-                <img src="pointer_south.png" alt="pointer" width="16px">
-                <img src="pointer_south.png" alt="pointer" width="16px">
+            <br>
+            <br>
+            <div>
+                <span>Number of Treasure cards per player</span>
+                <input type="range" value="2" min="1" max="12" oninput="rangevalue.value=value"/>
+                <output id="rangevalue">2</output>
             </div>
         </div>
+        <div class='winPage hidden'>
+        </div>
+        <div class='savedGame hidden'></div>
     </div>
-    <script src="pipe.js"></script>
+    <div class="game hidden">
+        <div class="main">
+            <div class="border">
+                <div class="upper">
+                    <img src="pointer_north.png" alt="pointer" width="16px">
+                    <img src="pointer_north.png" alt="pointer" width="16px">
+                    <img src="pointer_north.png" alt="pointer" width="16px">
+                </div>
+                <div class="leftSide">
+                    <img src="pointer_west.png" alt="pointer" width="16px">
+                    <img src="pointer_west.png" alt="pointer" width="16px">
+                    <img src="pointer_west.png" alt="pointer" width="16px">
+                </div>
+                <div class="grid">
+                    
+                </div>
+                <div class="rightSide">
+                    <img src="pointer_east.png" alt="pointer" width="16px">
+                    <img src="pointer_east.png" alt="pointer" width="16px">
+                    <img src="pointer_east.png" alt="pointer" width="16px">
+                </div>
+                <div class="lower">
+                    <img src="pointer_south.png" alt="pointer" width="16px">
+                    <img src="pointer_south.png" alt="pointer" width="16px">
+                    <img src="pointer_south.png" alt="pointer" width="16px">
+                </div>
+            </div>
+    
+            <div class="info">
+                <h3>Player's Info</h3>
+                <div class = "playerInfo">
+                    
+                </div>
+                <h3>Player's cards</h3>
+                <div class="cards">
+                </div>
+                
+                <h3 style="margin-top: 40px">Extra Room</h3>
+                <div class="extraCard">
+                
+                </div>
+            </div>
+            <script src="menu.js"></script>
+            <script src="pipe.js"></script>
+        </div>
+    </div>
 </body>
 </html>

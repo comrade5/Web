@@ -2,11 +2,124 @@
     display: grid;
     grid-template-columns: 5% 90% 5%;
     grid-template-rows: 5% 90% 5%;
-    grid-gap: "0px";
-    width: 400px;
-    height: 440px;
+    width: 500px;
+    height: 540px;
     margin-left:0;
     text-align: auto;
+}
+
+h3 {
+    margin: 0px;
+    margin-bottom: 10px;
+}
+
+.playerInfo {
+    background-color: darkslateblue;
+    width: 200px;
+    height: 100px;
+    margin-bottom: 20px;
+    color: white;
+    text-align: center;
+    font-size: 1em;
+    border: 5px solid black;
+}
+
+.extraCard {
+    width: 50px;
+}
+
+.hidden {
+    display: none;
+}
+
+.main {
+    display: flex;
+    gap: 10px
+}
+
+.menu {
+    position: relative;
+    width: 720px;
+    height: 580px;
+    background-color: darkslateblue;
+    color: white;
+    display:table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+.winPage h1 {
+    margin: 40px auto;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 70px;
+    font-weight: bold;
+    color: #CFC547;
+    text-align: center;
+    letter-spacing: 5px;
+    text-shadow: 3px 0px 7px rgba(81,67,21,0.8), -3px 0px 7px rgba(81,67,21,0.8), 0px 4px 7px rgba(81,67,21,0.8);
+}
+
+button[type=button] {
+    align-items: center;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .1) 0 6px 20px;
+    box-sizing: border-box;
+    color: #121212;
+    cursor: pointer;
+    display: inline-flex;
+    flex: 1 1 auto;
+    font-family: Inter,sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    justify-content: center;
+    line-height: 1;
+    margin: 0;
+    outline: none;
+    padding: 1rem 1.2rem;
+    text-align: center;
+    text-decoration: none;
+    transition: box-shadow .2s,-webkit-box-shadow .2s;
+    white-space: nowrap;
+    border: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .button-35:hover {
+    box-shadow: #121212 0 0 0 3px, transparent 0 0 0 0;
+  }
+
+.main-menu h1:hover {
+    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+}
+
+.menu .back {
+    position: absolute;
+    top: 5px;
+    left: 20px;
+    font-size: 3em;
+}
+
+.menu .back:hover {
+    text-shadow: 2px 2px 3px #0d0557, 1px 1px 5px #131314;
+}
+
+.instruction > p {
+    font-family: serif, "Times New Roman", Times;
+    font-size: 1.0em;
+    text-shadow: 
+      2px 2px 4px #111111, 
+      4px 4px 0px rgba(0, 0, 0, 0.2);
+    line-height: 32px;
+}
+
+.instruction img {
+    margin-top: 20px;
+    width: 200px;
 }
 
 .room {
@@ -16,19 +129,32 @@
 
 .player {
     position: absolute;
+    z-index: 100;
+    top: 65%;
+    left: 20%;
+}
+
+.treasure {
+    position: absolute;
     z-index: 2;
-    top: 20px;
-    left: 20px;
+    top: 70%;
+    left: 23%;
+}
+
+.highlight {
+    filter: grayscale(100%);
 }
 
 table {
     /* border-spacing:0;
     border-collapse: collapse; */
-    height: 360px;
+    height: 450px;
     margin-left: auto;
     margin-right: auto;
     width: 100%;
     table-layout:fixed;
+    position: relative;
+
 }
 
 table tr {
@@ -57,7 +183,6 @@ table td {
 }
 
 .grid {
-    margin-bottom: 6px;
     background-color:#512da8;
     position: relative;
 }
@@ -145,4 +270,32 @@ img[src="pointer_south.png"]:nth-child(3) {
     justify-self: start;
 }
 
+/* Settings ranges */
+
+.settings div span{
+    font-size: 1.3em;
+}
+
+  input,
+  output {
+    vertical-align: middle;
+    font-size: 1em;
+    font-family: Arial, sans-serif;
+  }
+  
+  output {
+    background: #ff4500;
+    padding: 5px 16px;
+    border-radius: 3px;
+    color: #fff;
+  }
+  
+
+  
+  input[type="range"]:focus,
+  input[type="number"]:focus {
+    box-shadow: 0 0 3px 1px #4b81dd;
+    outline: none;
+  }
+  
 
